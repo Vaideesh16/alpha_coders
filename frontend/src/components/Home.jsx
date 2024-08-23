@@ -1,5 +1,6 @@
 import React from "react";
 import About from "./About"
+import { Link } from "react-router-dom";
 import { Contact } from "./Contact";
 function Home() {
   return (
@@ -15,9 +16,9 @@ function Home() {
               EduTrack is a platform that creates tailored assessments for
               students based on their individual progress and learning needs,
               offering a more personalized evaluation experience. <br />
-              <span className="cursor-pointer font-bold">
+              <a href="/about" className="cursor-pointer font-bold">
                 Learn More &rarr;
-              </span>
+              </a>
             </p>
           </div>
           <h1 className="mt-8 max-w-4xl text-3xl font-bold tracking-tight text-black md:text-4xl lg:text-6xl">
@@ -31,12 +32,12 @@ function Home() {
           </p>
 
           <div className="mt-8">
-            <button
-              type="button"
+            <Link
+              to="/panal"
               className="rounded-md bg-black px-3 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
         <div className="rounded-lg bg-gray-200 p-4">
