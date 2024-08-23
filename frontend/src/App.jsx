@@ -5,6 +5,8 @@ import SignUp from './components/SignUp';
 import Login from './components/Login';
 import { Contact } from './components/Contact';
 import './App.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
