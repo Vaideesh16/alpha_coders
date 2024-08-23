@@ -8,7 +8,8 @@ function Home() {
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="flex flex-col justify-center px-4 py-10 lg:px-6">
           <div className="inline-flex items-center">
-            <img src="/logo.png" width={50} height={50} alt="logo" className="rounded-full" />
+          <img src="/logo.png" width={50} height={50} alt="logo" className="rounded-full" />
+            
             <span className="ml-4 text-2xl font-bold">EduTrack</span>
           </div>
           <div className="mt-10 flex max-w-max items-center space-x-2 rounded-full border p-2">

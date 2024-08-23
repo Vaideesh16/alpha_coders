@@ -1,7 +1,15 @@
-import React from 'react'
-import { ArrowRight } from 'lucide-react'
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { ArrowRight } from 'lucide-react';
 
 export default function SignUp() {
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const onSubmit = data => {
+    console.log(data);
+    // Handle form submission logic here
+  };
+
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -18,7 +26,7 @@ export default function SignUp() {
                 Sign In
               </a>
             </p>
-            <form action="#" method="POST" className="mt-8">
+            <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
               <div className="space-y-5">
                 <div>
                   <label htmlFor="name" className="text-base font-medium text-gray-900">
@@ -27,11 +35,13 @@ export default function SignUp() {
                   </label>
                   <div className="mt-2">
                     <input
+                      {...register('name', { required: 'Full Name is required' })}
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="text"
                       placeholder="Full Name"
                       id="name"
-                    ></input>
+                    />
+                    {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>}
                   </div>
                 </div>
                 <div>
@@ -41,11 +51,19 @@ export default function SignUp() {
                   </label>
                   <div className="mt-2">
                     <input
+                      {...register('email', {
+                        required: 'Email is required',
+                        pattern: {
+                          value: /^\S+@\S+$/i,
+                          message: 'Please enter a valid email address',
+                        },
+                      })}
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="email"
                       placeholder="Email"
                       id="email"
-                    ></input>
+                    />
+                    {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>}
                   </div>
                 </div>
                 <div>
@@ -57,16 +75,24 @@ export default function SignUp() {
                   </div>
                   <div className="mt-2">
                     <input
+                      {...register('password', {
+                        required: 'Password is required',
+                        minLength: {
+                          value: 6,
+                          message: 'Password must be at least 6 characters long',
+                        },
+                      })}
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="password"
                       placeholder="Password"
                       id="password"
-                    ></input>
+                    />
+                    {errors.password && <p className="text-red-600 text-sm mt-1">{errors.password.message}</p>}
                   </div>
                 </div>
                 <div>
                   <button
-                    type="button"
+                    type="submit"
                     className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                   >
                     Create Account <ArrowRight className="ml-2" size={16} />
@@ -119,5 +145,5 @@ export default function SignUp() {
         </div>
       </div>
     </section>
-  )
+  );
 }
