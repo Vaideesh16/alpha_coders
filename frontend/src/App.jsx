@@ -1,20 +1,13 @@
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
-import { Navbar } from './components/Navbar'
 
 
 function App() {
-
   return (
     <>
-      <Router>
-        <div>
-          <Navbar></Navbar>
-          <Routes>
-          </Routes>
-        </div>
-        </Router> 
+ <div className="text-red-700">
+  hello
+ </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
