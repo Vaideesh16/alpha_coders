@@ -22,7 +22,7 @@ function Home() {
           </div>
           <div className="mt-10 flex max-w-max items-center space-x-2 rounded-full border p-2">
             <p className="text-xs font-medium md:text-sm p-1 px-2">
-              EduTracK is a platform that creates tailored assessments for
+              EduTrack is a platform that creates tailored assessments for
               students based on their individual progress and learning needs,
               offering a more personalized evaluation experience.
               <span className="ml-2 cursor-pointer font-bold">
@@ -34,7 +34,7 @@ function Home() {
             Personalized Learning, Tailored to Your Needs
           </h1>
           <p className="mt-8 max-w-3xl text-lg text-gray-700">
-            At EduTracK, we understand the unique learning journey of each
+            At EduTrack, we understand the unique learning journey of each
             student. Our platform offers customized assessments designed to
             support individual progress, ensuring that every student receives
             the personalized attention they deserve to thrive academically.
@@ -51,10 +51,10 @@ function Home() {
         </div>
         <div className="rounded-lg bg-gray-200 p-4">
           <img
-            className="aspect-[3/2] w-full rounded-lg bg-gray-50 object-cover lg:aspect-auto lg:h-[400px]"
-            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc1fHx0ZWFtfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+            className="aspect-[3/2] w-full rounded-lg bg-white object-cover lg:aspect-auto lg:h-[400px]"
+            src="https://cdn.prometheanworld.com/wp-content/uploads/2023/03/18150319/GettyImages-1338740162-1296x550.jpg"
             alt=""
-          />
+          />  
         </div>
       </div>
     </div>
