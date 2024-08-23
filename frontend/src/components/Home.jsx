@@ -24,8 +24,8 @@ function Home() {
             <p className="text-xs font-medium md:text-sm p-1 px-2">
               EduTrack is a platform that creates tailored assessments for
               students based on their individual progress and learning needs,
-              offering a more personalized evaluation experience.
-              <span className="ml-2 cursor-pointer font-bold">
+              offering a more personalized evaluation experience. <br />
+              <span className="cursor-pointer font-bold">
                 Learn More &rarr;
               </span>
             </p>
