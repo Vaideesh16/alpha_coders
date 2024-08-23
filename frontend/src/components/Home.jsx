@@ -1,5 +1,5 @@
 import React from "react";
-
+import About from "./About"
 function Home() {
   return (
     <div className="relative w-full bg-white">
@@ -57,6 +57,7 @@ function Home() {
           />  
         </div>
       </div>
+      <About/>
     </div>
   );
 }
