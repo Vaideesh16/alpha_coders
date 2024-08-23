@@ -7,6 +7,8 @@ import { Contact } from './components/Contact';
 import './App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/login' element={<Login />} />
           <Route path='/contact' element={<Contact/>} />
+          <Route path='/about' element={<About/>}/>
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );
