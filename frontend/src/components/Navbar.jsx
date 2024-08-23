@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
-import Link from 'react-dom'
+import { Link } from 'react-router-dom'
 
 const menuItems = [
   {
@@ -62,15 +62,13 @@ export function Navbar() {
         </div>
         <div className="hidden space-x-2 lg:block">
           <Link
-            href="/signup"
-            type="button"
+            to="/signup"
             className="rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-black hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             Sign Up
           </Link>
           <Link
-            href = "/login"
-            type="button"
+            to="/login"
             className="rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             Log In
@@ -131,18 +129,20 @@ export function Navbar() {
                   </nav>
                 </div>
                 <div className="mt-2 space-y-2">
-                  <button
+                  <Link
+                  href="/login"
                     type="button"
-                    className="w-full rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    className=" w-full rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
-                    Sign In
-                  </button>
-                  <button
+                    Log In
+                  </Link>
+                  <Link
+                  href="/signup"
                     type="button"
                     className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
-                    Log In
-                  </button>
+                    Sign Up
+                  </Link>
                 </div>
               </div>
             </div>
